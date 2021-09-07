@@ -36,3 +36,105 @@
     transform: rotate(360deg);
   }
 }
+.List-Border {
+  margin: 10px;
+  border-style: solid;
+  border-width: 2px;
+  padding: 10px;
+
+}
+.List-Item {
+  margin: 10px;
+  border-style: solid;
+  border-width: 1px;
+  padding: 10px;
+}
+.List-Dropdown {
+  margin: 5px;
+  border-style: solid;
+  border-width: 1px;
+  padding: 10px;
+  background-color: lightcyan;
+
+}
+.CheckBox{
+  padding: 0px 20px 0px 50px;
+  border-color: #282c34;
+}
+.Button {
+  color: white;
+  background-color: #61dafb;
+  border-radius: 10px;
+  border-color: #61dafb;
+}
+.ButtonDown {
+  color: white;
+  background-color: #61dafb;
+  border-radius: 10px;
+  border-color: #61dafb;
+  cursor: pointer; /* Mouse pointer on hover */
+  display: inline-block;
+}
+
+/* Darker background on mouse-over */
+.ButtonDown:hover {
+  background-color: RoyalBlue;
+}
+.ButtonUp {
+  color: white;
+  background-color: #61dafb;
+  border-radius: 10px;
+  border-color: #61dafb;
+  margin: 10px;
+
+  cursor: pointer; /* Mouse pointer on hover */
+}
+
+/* Darker background on mouse-over */
+.ButtonUp:hover {
+  background-color: RoyalBlue;
+}
+.game {
+  text-align: center;
+  margin: 10px;
+  padding: 10px;
+}
+.Pluralsight{
+  text-align: center;
+}
+.Pluralsight p {
+  border-style: solid;
+  border-color: #282c34;
+}
+/*  The GitHub Cards App*/
+.github-profile {
+  margin: 1rem;
+}
+img {
+  width: 75px;
+}
+.info {
+  display: inline-block;
+  margin-left: 12px;
+}
+.name {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+form {
+  border: thin solid #ddd;
+  background-color: #fbfbfb;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.header {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  border-style: solid;
+  border-color: #282c34;
+}
