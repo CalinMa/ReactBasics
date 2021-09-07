@@ -1,7 +1,6 @@
 import logo from "../logo.svg";
 import Clock from "./Clock";
-import "./Header.css";
-import Game from "./TicTacToe";
+import "../CSS/Header.css";
 
 function Header () {
     return (
