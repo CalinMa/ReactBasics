@@ -6,6 +6,7 @@ import Pluralsight from "./Pluralsight";
 import GitHubCards from "./GitHubCards";
 
 import StarMatch from "./TheStarMatchGame";
+import ExpenseTracker from "./Expenses/ExpenseTracker";
 
 function Team (){
     return (
@@ -15,6 +16,7 @@ function Team (){
             <Pluralsight/>
             <GitHubCards title={"The GitHub Cards App"}/>
             <StarMatch title={"The Star Match Game"}/>
+            <ExpenseTracker/>
         </div>
     );
 }
