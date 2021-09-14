@@ -3,6 +3,8 @@ import ExpenseTrackerItem from "./ExpenseTrackerItem";
 import Card from "./ExpenseTrackerCard";
 import NewExpense from "../NewExpense/NewExpense";
 import ExpensesFilter from "./ExpensesFilter";
+import ExpenseChart from "./ExpenseChart";
+
 
 const dummyExpenses = [
     {
@@ -28,11 +30,14 @@ const dummyExpenses = [
 
 function ExpenseTracker() {
     const[expenses, setExpenses] = useState(dummyExpenses);
-    const [filteredYear, setFilteredYear] = useState('2020');
 
+    const [filteredYear, setFilteredYear] = useState('2020');
     const filterChangeHandler = selectedYear => {
         setFilteredYear(selectedYear);
     }
+    const filteredExpenses = expenses.filter(expense => {
+        return expense.date.getFullYear().toString() === filteredYear;
+    });
         const addExpenseHandler = (expense) => {
         console.log({expense});
             setExpenses((prevExpenses) => {
@@ -45,13 +50,17 @@ function ExpenseTracker() {
                 <h2>Expense Tracker App</h2>
                 <NewExpense onAddExpense={addExpenseHandler}/>
                 <Card className="expenses">
-                    <ExpensesFilter selected={filteredYear} onChangeFilter={filterChangeHandler}>2020</ExpensesFilter>
-                    {expenses.map(
-                        expense => <ExpenseTrackerItem
-                            title={expense.title}
-                            amount={expense.amount}
-                            date={expense.date}
-                        />
+                    <ExpenseChart expenses={filteredExpenses}/>
+                    <ExpensesFilter selected={filteredYear} onChangeFilter={filterChangeHandler}/>
+                    {filteredExpenses.length === 0 ? <p>No expenses found!</p> :
+                        filteredExpenses.map(
+                        expense =>
+                            <ExpenseTrackerItem
+                                key={expense.id}
+                                title={expense.title}
+                                amount={expense.amount}
+                                date={expense.date}
+                            />
                     )}
                 </Card>
             </div>
